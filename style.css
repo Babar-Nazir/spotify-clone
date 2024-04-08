@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+}
+main {
+  display: flex;
+  height: 100vh;
+  padding: 0.72rem;
+}
+.sidebar {
+  background-color: #000;
+  width: 30rem;
+  border-radius: 1.6rem;
+  margin-right: 0.72rem;
+}
+.main-content {
+  background-color: #121212;
+  flex: 1;
+  border-radius: 1.6rem;
+  overflow: auto;
+}
+.music-player {
+  background-color: aqua;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 7.2rem;
+  background-color: #000;
+}
+/* Nav */
+.nav {
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1.6rem;
+  padding: 1.2rem;
+  gap: 0.8rem;
+}
+.nav-option {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  gap: 2rem;
+  /* margin-left: 1rem; */
+}
+.nav-option a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-option i {
+  font-size: 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+.nav-option:last-child {
+  opacity: 0.7;
+}
+.nav-option:last-child:hover {
+  opacity: 1;
+}
+
+/* Library */
+.library {
+  background-color: #121212;
+  margin-top: 0.5rem;
+  border-radius: 1.6rem;
+  height: 100%;
+}
+.lib-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+.lib-option {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 0.7;
+}
+img {
+  height: 2rem;
+  width: 2rem;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.2rem;
+}
+.library i {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+.library i:hover {
+  opacity: 1;
+}
+
+.lib-option:hover {
+  opacity: 1;
+}
+.library a {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* Box */
+
+.box {
+  background-color: #232323;
+  padding: 2rem 1.8rem;
+  border-radius: 1.6rem;
+  margin: 0.72rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.box-p1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.72rem;
+}
+.box-p2 {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  margin-bottom: 1.4rem;
+  line-height: 1.6;
+}
+.badge {
+  align-self: flex-start;
+  border: none;
+  border-radius: 10rem;
+  padding: 1rem 1.2rem;
+  color: #000;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* MAIN CONTENT */
+/* sticky Nav */
+.sticky-nav {
+  position: sticky;
+  top: -1px;
+  background-color: #121212;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+}
+.sticky-nav-icons .badge {
+  background-color: #080808;
+  padding: 1rem;
+  opacity: 0.7;
+}
+.sticky-nav-icons .badge:last-child {
+  margin-left: 0.48rem;
+  opacity: 1;
+}
+.sticky-nav-icons img {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.sticky-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-right: 1.2rem;
+}
+.badge--dark {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .hide {
+    display: none;
+  }
+}
+
+/* .card-section */
+.card-section {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.24rem;
+}
+.heading-secondary {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+  margin-left: 1.2rem;
+}
+.card {
+  background-color: #232323;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  width: 15rem;
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.card img {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  padding: 0.24rem 0;
+  font-weight: 500;
+  margin-bottom: 0.72rem;
+}
+
+.card-info {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+.card-section:last-child::after {
+  content: "";
+  font-size: 2.4rem;
+  display: block;
+  width: 90%;
+  margin: 6.4rem auto 15rem auto;
+  display: flex;
+  border-bottom: 1px solid #fff;
+  opacity: 0.4;
+}
+
+/* Music Player */
+.music-player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.album {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.album img {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+}
+.album-info {
+  margin-left: -2.4rem;
+}
+.album-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.1rem;
+}
+.album-singer {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.player {
+  flex: 1 1 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player-controls {
+  display: flex;
+  gap: 3.6rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.play-button {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+.player-bar {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  width: 80%;
+}
+.progress-bar {
+  width: 75%;
+  margin: auto;
+}
+.progress-bar {
+  font-size: 1.4rem;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #1ed760;
+  height: 0.25rem;
+  border-radius: 10%;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: #1ed760;
+  height: 0.2rem;
+  border-radius: 10%;
+}
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: #5cd5eb;
+  height: 2rem;
+  width: 1rem;
+}
+/******** Firefox ********/
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: #ffffff;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  border: none;
+}
+.controls {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin: 0 3.6rem;
+}
+.controls img {
+  width: 2.4rem;
+  height: auto;
+  opacity: 0.7;
+}
+.controls input {
+  width: 50%;
+}
+.album .album-icon {
+  width: 24px;
+  height: auto;
+  margin-left: 2.4rem;
+}
+.album .album-icon:last-child {
+  margin-left: 0;
+}
